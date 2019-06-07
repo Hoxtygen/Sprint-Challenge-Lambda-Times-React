@@ -34,7 +34,6 @@ const Cards = props => {
            />
           })
           }
-          />
     </CardContainer>
   )
 }
