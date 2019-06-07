@@ -1,14 +1,15 @@
 import React from 'react';
 
 const Card = props => {
+  const {author, headline, img, tab} = props;
   return (
-    <div className="card">
-      <div className="headline">{/* headline goes here */}</div>
+    <div className="card" data-tab = {tab}>
+      <div className="headline">{headline}</div>
       <div className="author">
         <div className="img-container">
-          <img src={'' /* image source goes here */} />
+          <img src={img}  alt = {""}/>
         </div>
-        <span>By {/* author goes here */}</span>
+        <span>By {author}</span>
       </div>
     </div>
   );
