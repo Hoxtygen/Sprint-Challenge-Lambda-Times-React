@@ -1,7 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
+
 import Tab from './Tab';
 const Tabs = ({tabs, selectedTab, selectedTabHandler}) => {
-  console.log(tabs)
   return (
     <div className="tabs">
       <div className="topics">
@@ -23,11 +25,12 @@ const Tabs = ({tabs, selectedTab, selectedTabHandler}) => {
   );
 };
 
-/**
- *  return <Tab key={tab} selectedTabHandler={selectedTabHandler} tab={tab} selectedTab={selectedTab} />
- * 
- * 
- */
 
 // Make sure to use PropTypes to validate your types!
+Tab.propTypes = {
+  selectedTabHandler: PropTypes.func.isRequired,
+  tabs: PropTypes.array,
+  selectedTab: PropTypes.string.isRequired,
+}
+
 export default Tabs;
