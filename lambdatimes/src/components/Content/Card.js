@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Card = props => {
-  console.log(props)
   const {author, headline, img, tab} = props;
   return (
     <div className="card" data-tab = {tab}>
