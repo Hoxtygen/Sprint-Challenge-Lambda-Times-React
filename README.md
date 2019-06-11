@@ -28,37 +28,71 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 
 ## Self-Study/Essay Questions
 
-- [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
-- [ ] Describe a life-cycle event in React?
-- [ ] Explain the details of a Higher Order Component?
-- [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+* [x] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+
+  -  PropTypes ensure that components are using the data type that the programmer (or you) intended. It can be difficult keeping track of a value’s type in JavaScript. There are many solutions to this, such as flow and TypeScript. But the easiest way to get up and running is by using PropTypes. PropTypes define the type of a prop. So each time, a value is passed through a prop, it gets validated for it’s type. If you pass a value through a prop with a different data type than it is specified in the PropTypes, an error message will be printed in the console of your browser
+
+
+* [x] Describe a life-cycle event in React?
+
+    -   React lets you define components as classes or functions. The methods that you are able to use on these are called lifecycle events. These methods can be called during the lifecycle of a component, and they allow you to update the UI and application states.
+    Mounting, Updating, and Unmounting are the three phases of the component lifecycle.
+        - Mounting
+            When an instance of a component is being created and inserted into the DOM it occurs during the mounting phase. Constructor, static getDerivedStateFromProps, render, componentDidMount, and UNSAFE_componentWillMount all occur in this order during mounting.
+        - Updating
+            Anytime a component is updated or state changes then it is rerendered. These lifecycle events happen during updating in this order.
+
+            static getDerivedStateFromProps, shouldComponentUpdate, render,
+            getSnapshotBeforeUpdate, componentDidUpdate, UNSAFE_componentWillUpdate, UNSAFE_componentWillReceiveProps
+        -Unmounting
+            The final phase of the lifecycle if called when a component is being removed from the DOM. componentWillUnmount is the only lifecycle event during this phase.
+
+* [x] Explain the details of a Higher Order Component?
+
+-    A higher-order component (HOC) is an advanced technique in React for reusing component logic. A higher-order component is a  function that takes a component and returns a new component. HOC is not a feature in React or any other programming language,       but a pattern evolved from the compositional ( made of components ) nature of react.
+
+* [x] What are three different ways to style components in React? Explain some of the benefits of each.
+
+1. Inline styling
+    -   Convenience of having style and component logic consolidated in one place.
+    - makes it easy to change styles based on component state.
+    - if you want to build portable React component that can be used in any React app, CSS-in-js is almost mandatory.
+
+2. External stylesheet
+    - Separation of style and content.
+    - Maintain modularity if you create a separate css file for each component, e.g., in components/Btn you have Btn.js, Btn.css, and so forth.
+
+3. Styled components
+    - Styled-components makes it easer to import default styles and then modify them.
+    - Styled components lets you write traditional css write in your js files
+    - You can pass props with styled-components to handle logic
 
 ## Project Setup
 
 Follow these steps to set up your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your project manager as collaborator on Github.
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
-- [ ] From within the `lambdatimes` folder run `yarn` and then `yarn start`. This will open your locally hosted application in your browser. Once you are ready move onto the next steps.
-- [ ] Inside the `Content` folder you will find all 5 components that make up the content of the application. The flow goes like this: `Content > Tabs > Tab` and `Content > Cards > Card`. Follow the directions in the `Content` component to get your data ready.
+* [x] Create a forked copy of this project.
+* [x] Add your project manager as collaborator on Github.
+* [x] Clone your OWN version of the repository (Not Lambda's by mistake!).
+* [x] Create a new branch: git checkout -b `<firstName-lastName>`.
+* [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+* [x] Push commits: git push origin `<firstName-lastName>`.
+* [x] From within the `lambdatimes` folder run `yarn` and then `yarn start`. This will open your locally hosted application in your browser. Once you are ready move onto the next steps.
+* [x] Inside the `Content` folder you will find all 5 components that make up the content of the application. The flow goes like this: `Content > Tabs > Tab` and `Content > Cards > Card`. Follow the directions in the `Content` component to get your data ready.
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repository). **Please don't merge your own pull request**
+* [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repository). **Please don't merge your own pull request**
 - [ ] Add your project manager as a reviewer on the pull-request
 - [ ] Your project manager will count the project as complete by merging the branch back into master.
 
 ## Minimum Viable Product
 
-- [ ] Go through the `Tabs`, `Tab`, `Cards`, and `Card` components following the instructions, and passing data and props to get the tabs and cards to appear on the screen.
-- [ ] Once the Tabs and Cards are rendering to the screen complete the `changeSelected` and `filterCards` functions in the `Content` component.
-- [ ] You should now be able to filter cards using your tabs!
-- [ ] Make sure all of your props being passed are validated using PropTypes.
-- [ ] Find the `TopBar` and `Header` components. Convert these two components to Styled Components. You should not have any `className` props when you are finished.
+* [x] Go through the `Tabs`, `Tab`, `Cards`, and `Card` components following the instructions, and passing data and props to get the tabs and cards to appear on the screen.
+* [x] Once the Tabs and Cards are rendering to the screen complete the `changeSelected` and `filterCards` functions in the `Content` component.
+* [x] You should now be able to filter cards using your tabs!
+* [x] Make sure all of your props being passed are validated using PropTypes.
+* [x] Find the `TopBar` and `Header` components. Convert these two components to Styled Components. You should not have any `className` props when you are finished.
 
 ## Stretch Challenge
 
